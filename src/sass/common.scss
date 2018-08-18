@@ -1,5 +1,324 @@
 @import 'var';
-#nav{
-    height:30px;
+
+#top{
     background:#F5F5F5;
+    min-width:1200px;
+    line-height:30px; 
+    border-bottom:1px solid #ddd; 
+    .container{
+        box-sizing:border-box;       
+    }
+    .top_l{
+        font-size:12px;     
+        >ul{
+            >li{
+                float:left;
+                >a{
+                    margin-left:10px;
+                    display:block;
+                    height:30px;
+                    line-height:30px;
+                    color:#444;
+                    position:relative;
+                    .address{
+                        display:inline-block;
+                        padding-right:15px;
+                        margin-left:10px;
+                        position:relative;
+                        &::after{
+                            content:"";
+                            display:block;
+                            width:14px;
+                            height:15px;
+                            background:url(../img/sprites.png) no-repeat right top;
+                            position: absolute;
+                            right:0;
+                            top:7px;
+                            background-position:-40px 0;
+                        }
+                    }
+                    .comment{
+                        color:#f60;
+                    }
+                }
+            }
+            .home,.qulity{
+                >a{
+                    padding-left:21px;
+                    &::before{
+                        content:"";
+                        display:block;
+                        width:15px;
+                        height:15px;
+                        background:url(../img/sprites.png) no-repeat left top;
+                        position: absolute;
+                        left:0;
+                        top:7px;
+                    }
+                }
+            }
+            .qulity{
+                a{
+                    &::before{
+                        background-position:-80px 0px;
+                    }
+                }
+            }
+        }
+    }
+    .top_r{
+        font-size:12px;
+        >ul{
+            >li{
+                float:left; 
+                >a{
+                    display:block;
+                    margin-right:10px;
+                    color:#444;
+                }  
+            }
+            .user,.message{
+                display:none;
+            }
+            .help{
+                a{
+                    color:#fd0000;
+                    
+                }
+            }
+            .cart,.pet,.favorite,.phone{
+                >a{
+                    padding-left:19px;
+                    position:relative;
+                    &::before{
+                        content:"";
+                        display:block;
+                        width:19px;
+                        height:15px;
+                        background:url(../img/sprites.png) no-repeat left top;
+                        position:absolute;
+                        left:0;
+                        top:6px;
+                    }
+                }
+            }
+            .pet,.favorite{
+                >a{
+                    padding-right:14px;
+                    &::after{
+                        content:"";
+                        display:block;
+                        width:14px;
+                        height:15px;
+                        background:url(../img/sprites.png) no-repeat right top;
+                        position:absolute;
+                        right:0;
+                        top:7px;
+                        background-position:-240px 0;
+                    }
+                }
+                >ul{
+                    display:none;
+                    position:absolute;
+                    top:30px;
+                    border:1px solid #ddd;
+                    border-top:1px solid #fff;
+                    box-shadow:3px 3px 3px 2px #8f8f8f;
+                    padding:10px 0 10px 10px;
+                    width:105px;
+                    box-sizing:border-box;
+                    font-size:12px;
+                    z-index:1;
+                    >li{
+                        >a{
+                            display:block;
+                            color:#444;
+                            font-size:12px;
+                            line-height:16px;
+                            margin-bottom:5px;
+                            padding-left:9px;
+                            position:relative;
+                            &::before{
+                                content:"";
+                                display:block;
+                                width:9px;
+                                height:12px;
+                                background:url(../img/sprites.png) no-repeat left top;
+                                position:absolute;
+                                left:0;
+                                top:2px;
+                                background-position:-320px 0;
+                            }
+                        }
+                    }
+                }
+            }
+            .cart{
+                a::before{
+                    background-position:-120px 0;
+                }
+                span{
+                    color:#f60;
+                }
+            }
+            
+            .pet{
+                a::before{
+                    background-position:-160px 0;
+                }
+                
+            }
+            .pet:hover{
+                >ul{
+                    display:block;
+                }
+            }
+            .favorite{
+                a::before{
+                    background-position:-200px 0;
+                }          
+            }
+            .favorite:hover{
+                >ul{
+                    display:block;
+                }
+            }
+            .phone{
+                a::before{
+                    background-position:-280px 0;
+                }
+                img{
+                    display:none;
+                    position:absolute;
+                }
+                &:hover{
+                    img{
+                        display:block;
+                    }
+                }
+            }
+
+        }
+    }    
+}
+#logo{
+    min-width:1200px;
+    .container{
+        box-sizing:border-box;
+    }
+    .logo_l{
+        display:block;
+        width:300px;
+        height:120px;
+        background:url(../img/logo.png);
+        text-indent:-1000px;
+    }
+    .logo_c{
+        height:120px;
+        width:685px;
+        padding-top:33px;
+        box-sizing:border-box;
+        .logo_cl{
+            width:485px;
+            input{
+                width:405px;
+                height:34px;
+                box-sizing:border-box;
+                border:2px solid $maincolor;
+                border-right:$border;
+                padding-left:15px;
+                float:left
+            }
+            button{
+                display:inline-block;
+                width:75px;
+                height:34px;
+                background-color:$maincolor;
+                font-size:14px;
+                color:#fff;
+                font-weight:bold;
+            }
+            p{
+                margin-top:11px;
+                height:16px;
+                font-size:12px;
+                a{
+                    color:#999; 
+                    height:16px;
+                    font-size:12px;
+                    span{
+                        padding:0 10px;
+                        display:inline-block;
+                        border-right:1px solid #B299B2; 
+                    }
+                    
+                }    
+                :last-child{
+                    span{
+                        border-right:0 none;
+                    }   
+                }
+
+            }
+        }
+        .logo_cr{
+            color:#9F9F9F;
+            font-size:16px;
+            height:25px;
+            padding-left:23px;
+            margin-top:4px;
+            font-style:italic;
+            position:relative;
+            line-height:25px;
+            &::before{
+                content:"";
+                display:block;
+                width:23px;
+                height:25px;
+                background:url(../img/sprites.png) no-repeat left top;
+                position:absolute;
+                left:0;
+                top:0;
+                background-position:-360px 0;
+            }
+        }
+    }
+    .logo_r{
+        width:130px;
+        height:40px;
+        margin-top:33px;
+        background:url(../img/shopping-cart.gif) no-repeat;
+        p{
+            margin-left:50px;
+            color:#666;
+            font-size:14px;
+            line-height:40px;
+            span{
+                color:#f60;
+            }
+        }
+    }
+}
+#nav{
+    .container{
+        box-sizing:border-box;
+
+    }
+    .nav_l{
+        width:228px;
+        box-sizing:border-box;
+        >ul{
+            border:1px solid #e1e1e1;
+            >li{
+                float:left;
+                >a{
+                    display:inline-block;
+                    width:114px;
+                    height:37px;
+                    box-sizing:border-box;
+                    color:#666;
+                }
+            }
+        }
+    }
 }

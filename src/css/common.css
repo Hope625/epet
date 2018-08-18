@@ -1,6 +1,105 @@
-/* 
-* @Author: Marte
-* @Date:   2018-08-17 20:20:30
-* @Last Modified by:   Marte
-* @Last Modified time: 2018-08-17 21:09:12
-*/
+#top { background: #F5F5F5; min-width: 1200px; line-height: 30px; border-bottom: 1px solid #ddd; }
+
+#top .container { box-sizing: border-box; }
+
+#top .top_l { font-size: 12px; }
+
+#top .top_l > ul > li { float: left; }
+
+#top .top_l > ul > li > a { margin-left: 10px; display: block; height: 30px; line-height: 30px; color: #444; position: relative; }
+
+#top .top_l > ul > li > a .address { display: inline-block; padding-right: 15px; margin-left: 10px; position: relative; }
+
+#top .top_l > ul > li > a .address::after { content: ""; display: block; width: 14px; height: 15px; background: url(../img/sprites.png) no-repeat right top; position: absolute; right: 0; top: 7px; background-position: -40px 0; }
+
+#top .top_l > ul > li > a .comment { color: #f60; }
+
+#top .top_l > ul .home > a, #top .top_l > ul .qulity > a { padding-left: 21px; }
+
+#top .top_l > ul .home > a::before, #top .top_l > ul .qulity > a::before { content: ""; display: block; width: 15px; height: 15px; background: url(../img/sprites.png) no-repeat left top; position: absolute; left: 0; top: 7px; }
+
+#top .top_l > ul .qulity a::before { background-position: -80px 0px; }
+
+#top .top_r { font-size: 12px; }
+
+#top .top_r > ul > li { float: left; }
+
+#top .top_r > ul > li > a { display: block; margin-right: 10px; color: #444; }
+
+#top .top_r > ul .user, #top .top_r > ul .message { display: none; }
+
+#top .top_r > ul .help a { color: #fd0000; }
+
+#top .top_r > ul .cart > a, #top .top_r > ul .pet > a, #top .top_r > ul .favorite > a, #top .top_r > ul .phone > a { padding-left: 19px; position: relative; }
+
+#top .top_r > ul .cart > a::before, #top .top_r > ul .pet > a::before, #top .top_r > ul .favorite > a::before, #top .top_r > ul .phone > a::before { content: ""; display: block; width: 19px; height: 15px; background: url(../img/sprites.png) no-repeat left top; position: absolute; left: 0; top: 6px; }
+
+#top .top_r > ul .pet > a, #top .top_r > ul .favorite > a { padding-right: 14px; }
+
+#top .top_r > ul .pet > a::after, #top .top_r > ul .favorite > a::after { content: ""; display: block; width: 14px; height: 15px; background: url(../img/sprites.png) no-repeat right top; position: absolute; right: 0; top: 7px; background-position: -240px 0; }
+
+#top .top_r > ul .pet > ul, #top .top_r > ul .favorite > ul { display: none; position: absolute; top: 30px; border: 1px solid #ddd; border-top: 1px solid #fff; box-shadow: 3px 3px 3px 2px #8f8f8f; padding: 10px 0 10px 10px; width: 105px; box-sizing: border-box; font-size: 12px; z-index: 1; }
+
+#top .top_r > ul .pet > ul > li > a, #top .top_r > ul .favorite > ul > li > a { display: block; color: #444; font-size: 12px; line-height: 16px; margin-bottom: 5px; padding-left: 9px; position: relative; }
+
+#top .top_r > ul .pet > ul > li > a::before, #top .top_r > ul .favorite > ul > li > a::before { content: ""; display: block; width: 9px; height: 12px; background: url(../img/sprites.png) no-repeat left top; position: absolute; left: 0; top: 2px; background-position: -320px 0; }
+
+#top .top_r > ul .cart a::before { background-position: -120px 0; }
+
+#top .top_r > ul .cart span { color: #f60; }
+
+#top .top_r > ul .pet a::before { background-position: -160px 0; }
+
+#top .top_r > ul .pet:hover > ul { display: block; }
+
+#top .top_r > ul .favorite a::before { background-position: -200px 0; }
+
+#top .top_r > ul .favorite:hover > ul { display: block; }
+
+#top .top_r > ul .phone a::before { background-position: -280px 0; }
+
+#top .top_r > ul .phone img { display: none; position: absolute; }
+
+#top .top_r > ul .phone:hover img { display: block; }
+
+#logo { min-width: 1200px; }
+
+#logo .container { box-sizing: border-box; }
+
+#logo .logo_l { display: block; width: 300px; height: 120px; background: url(../img/logo.png); text-indent: -1000px; }
+
+#logo .logo_c { height: 120px; width: 685px; padding-top: 33px; box-sizing: border-box; }
+
+#logo .logo_c .logo_cl { width: 485px; }
+
+#logo .logo_c .logo_cl input { width: 405px; height: 34px; box-sizing: border-box; border: 2px solid #E73F85; border-right: 0 none; padding-left: 15px; float: left; }
+
+#logo .logo_c .logo_cl button { display: inline-block; width: 75px; height: 34px; background-color: #E73F85; font-size: 14px; color: #fff; font-weight: bold; }
+
+#logo .logo_c .logo_cl p { margin-top: 11px; height: 16px; font-size: 12px; }
+
+#logo .logo_c .logo_cl p a { color: #999; height: 16px; font-size: 12px; }
+
+#logo .logo_c .logo_cl p a span { padding: 0 10px; display: inline-block; border-right: 1px solid #B299B2; }
+
+#logo .logo_c .logo_cl p :last-child span { border-right: 0 none; }
+
+#logo .logo_c .logo_cr { color: #9F9F9F; font-size: 16px; height: 25px; padding-left: 23px; margin-top: 4px; font-style: italic; position: relative; line-height: 25px; }
+
+#logo .logo_c .logo_cr::before { content: ""; display: block; width: 23px; height: 25px; background: url(../img/sprites.png) no-repeat left top; position: absolute; left: 0; top: 0; background-position: -360px 0; }
+
+#logo .logo_r { width: 130px; height: 40px; margin-top: 33px; background: url(../img/shopping-cart.gif) no-repeat; }
+
+#logo .logo_r p { margin-left: 50px; color: #666; font-size: 14px; line-height: 40px; }
+
+#logo .logo_r p span { color: #f60; }
+
+#nav .container { box-sizing: border-box; }
+
+#nav .nav_l { width: 228px; box-sizing: border-box; }
+
+#nav .nav_l > ul { border: 1px solid #e1e1e1; }
+
+#nav .nav_l > ul > li { float: left; }
+
+#nav .nav_l > ul > li > a { display: inline-block; width: 114px; height: 37px; box-sizing: border-box; color: #666; }

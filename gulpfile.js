@@ -11,7 +11,7 @@ gulp.task('compileSass',function(){
     //匹配文件
     gulp.src(['./src/sass/*.scss'])//返回一个文件流
     //编译scss->css
-    .pipe(sass({outputStyle:'expanted'}).on('error',sass.logError))//得到css文件流
+    .pipe(sass({outputStyle:'compact'}).on('error',sass.logError))//得到css文件流
     //输出到硬盘
     .pipe(gulp.dest('./src/css/'))     
 });
