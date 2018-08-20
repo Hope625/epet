@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8" />
     <title>common</title>
-    <link rel="stylesheet" type="text/css" href="../css/base.css" />
     <link rel="stylesheet" type="text/css" href="../css/common.css" />
 </head>
 <body>
-<!-- --------------------------nav-------------------------->
+<!-- -----------------------top------------------------>
     <div id="top">
         <div class="container clearfix">
             <div class="top_l fl">
@@ -70,7 +69,7 @@
                 </div>
             </div>
             <div class="logo_r fr">
-                <p>购物车(<span>0</span>)</p>
+                <p><a href="#">购物车(<span>0</span>)</a></p>
             </div>
         </div>     
     </div>
@@ -79,26 +78,85 @@
         <div class="container clearfix">
             <div class="nav_l fl">
                 <ul class="clearfix">
-                    <li><a href="#">猫猫</a></li>
-                    <li><a href="#">商品分类</a></li>
+                    <li>
+                        <a href="#">猫猫<i></i></a>
+                        <ul>
+                            <li><a class="link" href="#">
+                                <p class="pic">
+                                    <img src="../img/dog.png" alt="" />
+                                </p>
+                                <span>21603</span>种精选宝贝
+                                <p class="change">切换到狗狗站</p>
+                                 </a> 
+                            <a class="linkimg" href="#"><img src="../img/dogpack.jpg" alt="" /></a></li>
+                            <li><a href="#" class="link">
+                                <p class="pic"><img src="../img/cat.png" alt="" /></p>
+                                <span>10931</span>种精选宝贝
+                                <p class="change">切换到猫猫站</p>
+                                 </a>
+                           <a class="linkimg" href="#"><img src="../img/catpack.jpg" alt="" /></a></li>
+                            <li><a href="#" class="link">
+                                <p class="pic"><img src="../img/fish.png" alt="" /></p>
+                                <span>1259</span>种精选宝贝
+                                <p class="change">切换到水族站</p>
+                            </a>
+                            <a class="linkimg" href="#"><img src="../img/fishpack.jpg" alt="" /></a></li>   
+                        </ul>
+                    </li>
+                    <li><a href="#">商品分类<i></i></a>
+                        <table class="categories">
+                            <tbody>
+                                <tr>
+                                    <td><a href="#">消暑<span>526</span></a></td>
+                                    <td>
+                                        <a href="#">洗浴<span>478</span></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">主粮<span>624</span></a></td>
+                                    <td><a href="#">零食<span>1897</span></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">清洁<span>279</span></a></td>
+                                    <td><a href="#">日用<span>1567</span></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">日用<span>1567</span></a></td>
+                                    <td><a href="#">玩具<span>1234</span></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">美容<span>1873</span></a></td>
+                                    <td><a href="#">保健<span>299</span></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">出行<span>874</span></a></td>
+                                    <td><a href="#">装扮<span>1299</span></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
                 </ul>
             </div>
-            <div class="nav_r fr">
-                <ul>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
+            <div class="nav_r fl">
+                <ul class="clearfix">
+                    <li><a href="#">E宠国际</a></li>
+                    <li><a href="#">品牌特卖</a></li>
+                    <li><a href="#">潮品视频</a></li>
+                    <li><a href="#">小剧场</a></li>
+                    <li><a href="#">罐头超市</a></li>
+                    <li><a href="#">E宠课堂</a></li>
+                    <li><a href="#">南瓜联盟</a></li>
                 </ul>
             </div>
         </div>
     </div>
     
-    <script type="text/javascript" src="../js/jquery-3.2.1.js"></script>
-    <script src="../js/html_common.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../js/require.js"  data-main="../js/html_common">></script>
 
 </body>
 </html>

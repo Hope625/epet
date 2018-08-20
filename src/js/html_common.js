@@ -1,55 +1,54 @@
-jQuery(function($){
-    //获取地址请求
-    let Region = function(){
+require(['config'],function(){
+    require(['jquery','common'],function($){
+         //获取地址请求
+        let Common = function(){
+            this.init();
+        }     
+        Common.prototype = {
 
-        this.init();
-    }
-    
-   Region.prototype = {
-    constructor:Region,
-    init(){
-        //通过Ajax请求获取所有地址数据,暂未实现
-        $.ajax({
-            url: '../api/data/region.json',
-            type: 'get',
-            dataType: 'json',
-        })
-        .done(function(data){
-            console.log(data);
-            let address_box = $('<div />');
-            let address_top = $('<div />');
-            address_top.html(`<span class="province"></span><span class="city"></span><span class="region"></span>`);
-            //tab标签
-            address_top.appendTo(address_box);
-            let address_content = $('<div />');
-            //address内容
-            let province_ul = $('<ul />');
-            province_ul.appendTo(address_content); 
-            address_content.appendTo(address_box);
-            address_box.appendTo($('.address'));
-        });
-        //通过Ajax获取热搜数据
-        $.ajax({
-            url: '../api/data/hotsearch.json',
-            type: 'GET',
-            dataType: 'json',
-        })
-        .done(function(data) {
-            $('.hotsearch').html('热门搜索：'+data.map(function(item){
-            return `<a href="${item.src}"><span>${item.title}</span></a>`;
-           }).join(''))
-        })
-        
-        
+            constructor:Common,
+            init(){       
+                $.get("../api/data/hotsearch.json",data=>{
+                    $('.hotsearch').html('热门搜索：'+this.getHotSearch(data));  
+                });
+                $('.nav_l ul li').on('mouseover.hope',function(){
+                    let $linkimg = $(this).children('.linkimg');
+                    $linkimg.stop(true,true).show();
+                });
+                $('.nav_l ul li').on('click.hope',function(){
+                    let $pic = $('.link').children('.pic');
+                    let index = $(this).index();
+                    $pic.eq(index).addClass('picactive');
+                    $(this).addClass('liactive');
+                })
+                $('.nav_l ul li').on('mousemove',function(){
+                    let $linkimg = $(this).children('.linkimg');
+                    $linkimg.css({"display":"block"});
+                    $(this).off('mouseover.hope');
 
-    },
-    
-    getAddress(){       
-        
-        
-    },
-    }
-    new Region();
-
-
+                    
+                })
+                $('.nav_l ul li').on('mouseout',function(){
+                    let $linkimg = $(this).children('.linkimg');
+                    $linkimg.stop(true,true).hide(0);
+                });
+                
+            
+            },
+            getHotSearch(data){
+                let content = '';
+                content += data.map(function(item){
+                    return `<a href="${item.src}"><span>${item.title}</span></a>`;
+                }).join('');
+                return content;
+               
+            },
+            getAddress(){       
+                
+                
+            }
+        }
+        new Common();
+    })
 })
+   
