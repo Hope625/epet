@@ -78,6 +78,43 @@ require(['config'],function(){
                     })
                 });
                 $('.categories ul li').addClass('clearfix');
+                let end = Date.parse('2018-8-23 00:00:00');
+                let timer = setInterval(countdown,1000);
+                //倒计时
+                function countdown(){
+                    let now = Date.now();
+                    let offset = parseInt((end - now)/1000);
+                    if(offset <= 0){
+                        clearInterval(timer);
+                        $('.lasttime').hide();
+                    }
+                    
+                    // 转剩余时间
+                    let sec = offset%60;
+                    let min = Math.floor(offset/60)%60;
+                    let hour = Math.floor(offset/60/60)%24;
+                    let days = Math.floor(offset/60/60/24);
+
+                    // 补0操作
+                    sec = sec<10 ? '0'+sec : sec;
+                    min = min<10 ? '0'+min : min;
+                    hour = hour<10 ? '0'+hour : hour;
+
+
+                    // 拼接时间格式，写入页面
+                    $('.lasttime').html(`${days}天${hour}时${min}分${sec}秒`); 
+                }
+                $('.aside_content').css({
+                    height:$(window).height()
+                })
+                $(window).on('scroll',function(){
+                    $('.aside_last').css({
+                        display:$(window).scrollTop()>130? 'block':'none'
+                    })
+                })
+                
+                
+
             },
             getHotSearch(data){
                 let content = '';
@@ -89,7 +126,10 @@ require(['config'],function(){
             getAddress(){       
                 
                 
-            }
+            },
+            
+            
+           
         }
         new Common();
     })

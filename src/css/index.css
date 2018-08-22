@@ -1,0 +1,42 @@
+@import url("common.css");
+#carousel { margin-top: 32px; }
+
+#carousel .container { position: relative; }
+
+#carousel .banner { position: relative; margin-left: 230px; overflow: hidden; width: 770px; height: 360px; }
+
+#carousel .banner ul li { position: absolute; left: 0; top: 0; }
+
+#carousel .banner ul li img { width: 770px; height: 360px; background-size: cover; }
+
+#carousel .banner .active { background: #fff; color: #000; }
+
+#carousel .banner .page { position: absolute; left: 260px; bottom: 20px; }
+
+#carousel .banner .page span { display: inline-block; width: 20px; height: 20px; background-color: #999; color: #fff; border-radius: 50%; text-align: center; font-size: 12px; margin-left: 10px; }
+
+#carousel .banner .page .pageactive { background-color: #fff; color: #000; }
+
+#carousel .ad { position: absolute; right: 0; top: 0; }
+
+#carousel .ad a { display: block; }
+
+#carousel .ad img { width: 200px; height: 120px; background-size: cover; }
+
+#main .fengqiang { margin-top: 30px; }
+
+#main .fengqiang_l { position: relative; }
+
+#main .fengqiang_l > p { position: absolute; left: 100px; top: 200px; padding-left: 29px; }
+
+#main .fengqiang_l > p span { font-size: 30px; font-weight: bold; color: #fff; }
+
+#main .fengqiang_l > p:before { content: ""; display: block; width: 29px; height: 32px; background: url(../img/sprites.png) no-repeat; position: absolute; left: 0; top: 2px; background-position: -180px -100px; }
+
+#main .fengqiang_l > p:after { content: ""; display: block; width: 62px; height: 22px; background: url(../img/jxz.png) no-repeat; position: absolute; right: -55px; top: -10px; }
+
+#main .fengqiang_l .winner { width: 280px; height: 35px; background-color: #FF7188; border-radius: 10px; position: absolute; left: 0; bottom: 20px; overflow: hidden; font-size: 12px; line-height: 35px; padding-left: 35px; margin-left: 20px; box-sizing: border-box; }
+
+#main .fengqiang_l .winner a { color: #fff; }
+
+#main .fengqiang_l .winner:before { content: ""; width: 27px; height: 34px; background: url(../img/winner.png) no-repeat; position: absolute; top: 2px; left: 3px; }
