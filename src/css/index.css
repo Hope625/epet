@@ -1,6 +1,4 @@
 @import url("common.css");
-#carousel { margin-top: 32px; }
-
 #carousel .container { position: relative; }
 
 #carousel .banner { position: relative; margin-left: 230px; overflow: hidden; width: 770px; height: 360px; }
@@ -13,7 +11,7 @@
 
 #carousel .banner .page { position: absolute; left: 260px; bottom: 20px; }
 
-#carousel .banner .page span { display: inline-block; width: 20px; height: 20px; background-color: #999; color: #fff; border-radius: 50%; text-align: center; font-size: 12px; margin-left: 10px; }
+#carousel .banner .page span { display: inline-block; width: 20px; height: 20px; background-color: #999; color: #fff; border-radius: 50%; text-align: center; font-size: 12px; margin-left: 10px; cursor: pointer; }
 
 #carousel .banner .page .pageactive { background-color: #fff; color: #000; }
 
@@ -37,6 +35,50 @@
 
 #main .fengqiang_l .winner { width: 280px; height: 35px; background-color: #FF7188; border-radius: 10px; position: absolute; left: 0; bottom: 20px; overflow: hidden; font-size: 12px; line-height: 35px; padding-left: 35px; margin-left: 20px; box-sizing: border-box; }
 
+#main .fengqiang_l .winner ul { position: absolute; left: 35px; top: 0; }
+
 #main .fengqiang_l .winner a { color: #fff; }
 
 #main .fengqiang_l .winner:before { content: ""; width: 27px; height: 34px; background: url(../img/winner.png) no-repeat; position: absolute; top: 2px; left: 3px; }
+
+#main .fengqiang_rt { width: 870px; height: 68px; overflow: hidden; position: relative; padding: 0 60px; box-sizing: border-box; border-bottom: 1px dashed #E7E7E7; }
+
+#main .fengqiang_rt ul { width: 1200px; position: absolute; left: 0; top: 0; }
+
+#main .fengqiang_rt ul > li { float: left; }
+
+#main .fengqiang_rt ul > li > a { display: block; width: 50px; margin: 0 35px; height: 68px; font-size: 12px; color: #000; text-align: center; margin-top: 20px; }
+
+#main .fengqiang_rt .btnprev { font-size: 12px; position: absolute; left: 15px; top: 25px; color: #A3A3A3; cursor: pointer; }
+
+#main .fengqiang_rt .btnnext { position: absolute; right: 15px; top: 25px; font-size: 12px; color: #A3A3A3; cursor: pointer; }
+
+#main .fengqiang_rt .saleactive { font-size: 14px; font-weight: bold; width: 56px; margin: 15px 32px 0 32px; color: #f00; border-bottom: 1px solid #999; }
+
+#main .fengqiang_rb { display: block; width: 870px; height: 390px; position: relative; overflow: hidden; }
+
+#main .fengqiang_rb ul { position: absolute; left: 50px; top: 75px; }
+
+#main .fengqiang_rb li { float: left; position: relative; }
+
+#main .fengqiang_rb li a { display: block; font-size: 12px; color: #000; margin-right: 60px; }
+
+#main .fengqiang_rb li a .goods { width: 155px; text-align: center; }
+
+#main .fengqiang_rb li a .goods img { width: 155px; height: 155px; background-size: cover; }
+
+#main .fengqiang_rb li a span { color: #f00; font-size: 18px; }
+
+#main .fengqiang_rb li a del { margin-left: 5px; color: #999; }
+
+#main .fengqiang_rb li a .rmb { font-size: 12px; }
+
+#main .fengqiang_rb li a button { margin-top: 30px; width: 120px; height: 30px; border-radius: 20px; color: #fff; }
+
+#main .fengqiang_rb li > img { position: absolute; left: 5px; top: 20px; }
+
+#main .fengqiang_rb > span { display: block; position: absolute; top: 150px; width: 20px; height: 50px; background-color: #ddd; line-height: 50px; text-align: center; color: #fff; cursor: pointer; }
+
+#main .fengqiang_rb .goods_btnprev { left: 10px; }
+
+#main .fengqiang_rb .goods_btnnext { right: 0; }

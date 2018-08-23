@@ -357,7 +357,7 @@
 
 #bottom .bottom_b ul li:first-child a { margin-left: 40px; }
 
-#bottom .bottom_b .addmit { margin-top: 25px; margin-bottom: 40px; text-align: center; font-size: 12px; color: #000; }
+#bottom .bottom_b .addmit { margin-top: 25px; padding-bottom: 40px; text-align: center; font-size: 12px; color: #000; }
 
 #aside .aside_content { min-height: 800px; width: 35px; position: fixed; right: 0; top: 0; background-color: #444; }
 
@@ -374,3 +374,7 @@
 #aside li:nth-child(4) a { margin-top: 35px; }
 
 #aside li:nth-child(6) a { margin-top: 100px; }
+
+.kefu { width: 110px; height: 40px; position: fixed; right: 0; bottom: 0; background-color: #f96666; border-radius: 5px; text-align: center; padding-left: 27px; line-height: 40px; color: #fff; font-size: 14px; }
+
+.kefu::before { content: ""; display: block; width: 20px; height: 21px; background: url(../img/sprites.png) no-repeat; position: absolute; left: 30px; top: 7px; background-position: -380px -100px; }
