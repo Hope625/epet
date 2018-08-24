@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("common.css");
 #carousel .container { position: relative; }
 
@@ -82,3 +83,87 @@
 #main .fengqiang_rb .goods_btnprev { left: 10px; }
 
 #main .fengqiang_rb .goods_btnnext { right: 0; }
+
+#main .cat_zhuliang { margin-top: 52px; }
+
+#main .cat_zhuliang h4 { font-size: 18px; padding-left: 37px; position: relative; margin-bottom: 10px; }
+
+#main .cat_zhuliang h4:before { content: ""; display: block; width: 27px; height: 25px; background: url(../img/sprites.png) no-repeat; left: 0; top: 0; position: absolute; background-position: -420px -100px; }
+
+#main .cat_zhuliang .tab { border: 1px solid #ddd; border-bottom: 0 none; position: relative; }
+
+#main .cat_zhuliang .tab > li { float: left; }
+
+#main .cat_zhuliang .tab > li > a { display: block; height: 25px; color: #666; font-size: 12px; }
+
+#main .cat_zhuliang .tab > li > a > span { display: block; height: 14px; padding: 0 15px; margin-top: 10px; border-right: 1px solid #ddd; }
+
+#main .cat_zhuliang .tab > li:last-child > span { border-right: 0 none; }
+
+#main .cat_zhuliang .tab .tabcontent { position: absolute; left: -581px; top: 34px; border-top: 1px solid #E74085; border-right: 1px solid #ddd; width: 873px; height: 511px; box-sizing: border-box; overflow: hidden; }
+
+#main .cat_zhuliang .tab .tabcontent > ul { overflow: hidden; }
+
+#main .cat_zhuliang .tab .tabcontent > ul > li { float: left; }
+
+#main .cat_zhuliang .tab .tabcontent > ul > li > a { display: block; border-left: 1px solid #ddd; width: 218px; padding: 42px 20px; text-align: center; box-sizing: border-box; border-bottom: 1px solid #ddd; color: #999; font-size: 12px; font-family: "微软雅黑"; }
+
+#main .cat_zhuliang .tab .tabcontent > ul > li > a img { width: 80px; }
+
+#main .cat_zhuliang .tab .tabcontent > ul > li p { text-align: left; font-size: 12px; margin-top: 15px; font-weight: normal; }
+
+#main .cat_zhuliang .tab .tabcontent > ul > li span { display: block; text-align: left; font-size: 16px; color: #f00; margin-top: 7px; }
+
+#main .cat_zhuliang .tab .content_tl { position: relative; width: 385px; box-sizing: border-box; }
+
+#main .cat_zhuliang .tab .content_tr { border-left: 1px solid #ddd; }
+
+#main .cat_zhuliang .tab .content_tr .content_trt { position: relative; border-bottom: 1px solid #ddd; }
+
+#main .cat_zhuliang .tab .content_tr .content_trb { position: relative; }
+
+#main .cat_zhuliang .tab .goodsname { position: absolute; left: 20px; top: 30px; font-size: 16px; }
+
+#main .cat_zhuliang .tab .goodsname span { font-size: 14px; color: #f00; line-height: 30px; }
+
+#main .cat_zhuliang .tab .content_b ul { width: 873px; height: 60px; }
+
+#main .cat_zhuliang .tab .content_b li { float: left; position: relative; }
+
+#main .cat_zhuliang .tab .content_b li a { border-left: 1px solid #ddd; color: #000; }
+
+#main .cat_zhuliang .tab .content_b p { position: absolute; left: 20px; top: 20px; font-size: 16px; color: #000; }
+
+#main .cat_zhuliang .tab .content_b p span { color: #f00; font-size: 14px; }
+
+#main .cat_zhuliang .tab .tabactive > a { height: 35px; border: 1px solid #E74085; border-top: 2px solid #E74085; color: #E74085; border-bottom: 1px solid #fff; margin-left: -2px; }
+
+#main .cat_zhuliang .tab .tabactive > a > span { border: 0 none; }
+
+#main .cat_zhuliang .zhuliang_tl { position: relative; width: 327px; height: 511px; box-sizing: border-box; }
+
+#main .cat_zhuliang .zhuliang_tl img { width: 327px; height: 476px; background-size: cover; }
+
+#main .cat_zhuliang .hot { height: 177px; width: 327px; position: absolute; left: 0px; bottom: 0; background-color: #E4DCEE; }
+
+#main .cat_zhuliang .hot h6 { margin-top: 10px; font-size: 14px; text-align: center; }
+
+#main .cat_zhuliang .hot h6 span { display: inline-block; position: relative; padding-left: 30px; margin: 0 10px; }
+
+#main .cat_zhuliang .hot h6 span:before { content: ""; display: block; width: 30px; height: 28px; background: url(../img/sprites.png) no-repeat; position: absolute; left: 0; top: -4px; background-position: -460px -100px; }
+
+#main .cat_zhuliang .hot ul { margin-top: 20px; }
+
+#main .cat_zhuliang .hot ul li { float: left; }
+
+#main .cat_zhuliang .hot ul li a { display: block; color: #999; font-size: 12px; width: 80px; text-align: center; line-height: 25px; height: 25px; border-radius: 20px; margin: 0 10px; background-color: #fff; margin-bottom: 10px; }
+
+#main .cat_zhuliang .hot ul li:hover a { color: #0af; }
+
+#main .cat_zhuliang .zhuliang_b ul { width: 1198px; border: 1px solid #ddd; border-right: 0 none; }
+
+#main .cat_zhuliang .zhuliang_b ul li { float: left; }
+
+#main .cat_zhuliang .zhuliang_b ul li a { display: block; padding: 5px 24px; border-right: 1px solid #ddd; box-sizing: border-box; }
+
+#main .cat_zhuliang .zhuliang_b ul li:last-child a { border-right: 0 none; }

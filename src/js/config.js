@@ -8,8 +8,8 @@ require.config({
         'index':'../js/index'
     },
     shim:{
-        'index':['common'],
         'html_common':['common'],
-        'index':['html_common']
+        'index':['html_common'],
+        'register':['html_common']
     }
 });

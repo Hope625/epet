@@ -62,6 +62,7 @@ require(['config'],function(){
                     })
                     ele.on('mouseout',()=>{
                         this.timer = setInterval(this.autoPlay.bind(this),opt.duration);
+
                     })
                     $('.nav_l').on('mouseover',function(){
                         this.stop;
@@ -195,13 +196,13 @@ require(['config'],function(){
                 for(let i=0;i<this.time.length;i++){
                     
                     if(day==='上午'){
-                        if(date>=time[i]&&date<time[i+1]){
+                        if(date>=time[i].slice(0,2)&&date<time[i+1].slice(0,2)){
                             content += `<li><a href="#">${time[i]}<br />进行中</a></li>`;
                         }
-                        else if(date<time[i]){
+                        else if(date<time[i].slice(0,2)){
                             content += `<li><a href="#">${time[i]}<br />即将开始</a></li>;`
                         }
-                        else if(date>=time[i+1]){
+                        else if(date>=time[i+1].slice(0,2)){
                             content += `<li><a href="#">${time[i]}<br />已结束</a></li>`;
                         }
                     }else{
@@ -227,8 +228,21 @@ require(['config'],function(){
                 $('.fengqiang_rt').find("a:contains('已结束')").css({
                     "color":'#999'
                 });
+                $('.fengqiang_rt').find('li').eq(0).children('a').addClass('saleactive');
+                $('.fengqiang_rt').find('li').eq(0).children("a:contains('即将开始')").css({
+                    'color':"#f00"
+                });
+                $('.fengqiang_rt').find('li').eq(0).children("a:contains('即将开始')").closest('.fengqiang_r').find('button').css({
+                    "background-color":"#0fa"
+                });
+                $('.fengqiang_rt').find('li').eq(0).children("a:contains('进行中')").css({
+                    'color':"#f00"
+                });
+                $('.fengqiang_rt').find('li').eq(0).children("a:contains('进行中')").closest('.fengqiang_r').find('button').css({
+                    "background-color":"#ddd"
+                });
                 $('.fengqiang_rt').find('li').on('mouseover',function(){
-
+                    $(this).removeClass('saleactive');
                     $(this).find("a:contains('即将开始')").addClass('saleactive');
                     $(this).find("a:contains('即将开始')").css({
                         "color":"#f00"
@@ -241,7 +255,17 @@ require(['config'],function(){
                     $(this).find("a:contains('已结束')").css({
                         "color":"#999"
                     });
-                    $('.goods button').text($('.saleactive').text().slice(5,));
+                    if($('.fengqiang_rt').find('li').index==0){
+                        $('.goods button').text($('.saleactive').text().slice(5,));
+                    }
+                    else if($('.fengqiang_rt').find('li').eq(0).children('a').hasClass('saleactive')){
+                        $('.goods button').text($('.saleactive').text().slice(13,));
+                        $('.fengqiang_rt').find('li').eq(0).children('.saleactive').closest('.fengqiang_r').find('button').text($('.fengqiang_rt').find('li').eq(0).children('.saleactive').text().slice(5,))
+                    }
+                    else{
+                        $('.goods button').text($('.saleactive').text().slice(5,));
+                    }
+                    
                     $(this.ele).find("a:contains('明日预告')").closest('fengqiang_r').children('.fengqiang_rb').find('.goods button').text('即将开始');
                     
                     $(".goods button:contains('即将开始')").css({
@@ -251,7 +275,7 @@ require(['config'],function(){
                     $(".good button:contains('已结束')").closest('li').find('>img').show();
                 })
                 $('.fengqiang_rt').find('li').on('mouseout',function(){
-                    
+                    $(this).eq(0).removeClass('saleactive');
                     $(this).find("a:contains('即将开始')").removeClass('saleactive')
                     $(this).find("a:contains('即将开始')").css({
                         "color":"#000"
@@ -313,36 +337,43 @@ require(['config'],function(){
                    $(this.ele).css({
                     'width':salegoods_a.length * salegoods_a.eq(0).outerWidth(true)
                    });
-                   $('.goods_btnprev').on('click',()=>{
-                    if($(this.ele).css('left')==='50px'){
-                        $(this.ele).css({
-                            "left":"50px"
-                            })
-                        }
-                        else{
+                   
+                   if(data.length>4){
+                        $('.goods_btnprev').on('click',()=>{
+                        if($(this.ele).css('left')==='50px'){
                             $(this.ele).css({
-                                "left":(parseInt($(this.ele).css('left'))+$(this.ele).find('a').outerWidth()) + 'px'
-                            })
+                                "left":"50px"
+                                })
+                            }
+                            else{
+                                $(this.ele).css({
+                                    "left":(parseInt($(this.ele).css('left'))+$(this.ele).find('a').outerWidth()) + 60 + 'px'
+                                })
 
-                        }
+                            }
+                        })
 
-                   })
-                   $('.goods_btnnext').on('click',()=>{
-                    if($(this.ele).css('left')===(($('this.ele').find("a").length-4) * $(this.ele).find('a').outerWidth())-50+'px'){
-                        this.ele.css({
-                            "left":($('this.ele').find("a").length-4) * $(this.ele).find('a').outerWidth()-50 +'px'
+                        $('.goods_btnnext').on('click',()=>{
+                            console.log($(this.ele).css('left'));
+                            console.log((($('this.ele').find("a").length-4) * $(this.ele).find('a').outerWidth()-50));
+                            if($(this.ele).css('left').slice(0,-2)<=(($('this.ele').find("a").length-4) * $(this.ele).find('a').outerWidth())-50){
+                                $('.gooods_btnnext').off('click');
+                            
+                            }
+                            else{
+                                $(this.ele).css({
+                                    "left":parseInt($(this.ele).css("left")) - $(this.ele).find('a').outerWidth()-60 +'px'
+                                })
+                            }
+
                         })
+                        $('.goods').find("button:contains('进行中')").closest('li').children('img').show();
+                       
+                        $('.goods').find("button:contains('已结束')").closest('li').children('img').show();
+                        $('.goods').find("button:contains('即将进行')").closest('li').children('img').hide();
                     }
-                    else{
-                        $(this.ele).css({
-                            "left":parseInt($(this.ele).css("left")) - $(this.ele).find('a').outerWidth()-60 +'px'
-                        })
-                        console.log($(this.ele).css("left")-$(this.ele).find('a').outerWidth());
-                    }
-                    $()
-                   })
                 })
-            },
+            },        
             getSaleGoods(data){
                 let content = '';
                 content += data.map(function(item){
@@ -354,6 +385,123 @@ require(['config'],function(){
         new SaleGoods({
             ele:'.fengqiang_rb ul'
         })
+        function Tab(opt){      
+            this.opt = opt;
+            this.init();  
+        }
+        Tab.prototype = {
+            constructor:Tab,
+            init(){
+                let opt = this.opt;
+                let ele = opt.ele;
+                $('<ul></ul>').html(opt.text.map(function(item){
+                    return `<li><a href="#"><span>${item}</span></a></li>`;
+                }).join('')).appendTo($(ele));
+                $('<div />').addClass('tabcontent').appendTo($(ele).children('ul').children('li'));
+                $(ele).find('ul').addClass('tab clearfix');
+                $('.tab').find('li').eq(0).addClass('tabactive');
+
+                $('.tab').children('li').on('mouseover',function(){
+                    $('.tab').find('li').eq(0).removeClass('tabactive'); 
+                    $(this).addClass('tabactive'); 
+                                                
+                });
+                $('.tab').children('li').on('mouseover',()=>{
+                    
+                    if($('.tab').find('.tabactive >a').children("span").text()==="进口猫粮"){
+                        $('.tabcontent').html('');
+                        $.get('../api/getimport.php',data=>{
+                            $('<ul></ul>').addClass('content').appendTo('.tabcontent');
+                            $('.content').html(this.renderimport(JSON.parse(data)));
+                        })
+                    }
+                    if($('.tab').find('.tabactive >a').children("span").text()==="热门"){
+                        $('.tabcontent').html('');
+                        $.get('../api/gethotfood.php',data=>{
+                            let d = JSON.parse(data);
+                            $('<div />').addClass('content_t clearfix').appendTo('.tabcontent');
+                            $('<div />').addClass('content_tl fl').appendTo('.content_t');
+                            $('<img />').attr('src',d[0].imgurl).appendTo('.content_tl');
+                            $('<p />').addClass('goodsname').html(`${d[0].name}<br />`).appendTo('.content_tl');
+                            $('<span>').text(d[0].description).appendTo('.goodsname');
+
+                            $('<div / >').addClass('content_tr fr').appendTo('.content_t');
+                            $('<div/>').addClass('content_trt').appendTo('.content_tr');
+                            $('<img />').attr('src',d[1].imgurl).appendTo('.content_trt');
+                            $('<p />').addClass('goodsname').html(`${d[1].name}<br />`).appendTo('.content_trt');
+                            $('<span>').text(d[1].description).appendTo('.content_trt .goodsname');
+
+                            $('<div/>').addClass('content_trb').appendTo('.content_tr');
+                            $('<img />').attr('src',d[2].imgurl).appendTo('.content_trb');
+                            $('<p />').addClass('goodsname').html(`${d[2].name}<br />`).appendTo('.content_trb');
+                            $('<span>').text(d[2].description).appendTo('.content_trb .goodsname');
+
+                            $('<div />').addClass('content_b').appendTo('.tabcontent');
+                            $('<ul></ul>').addClass('clearfix').appendTo('.content_b');
+                            $('.content_b ul').html(this.renderhot(d));
+                            
+                        })
+                }
+ 
+                });
+                $('.tab').children('li').on('mouseout',function(){
+                    $('.tab').find('li').eq(0).removeClass('tabactive');
+                    $(this).removeClass('tabactive');
+                });
+                if($('.tab').find('.tabactive >a').children("span").text()==="热门"){
+                        $('.tabcontent').html('');
+                        $.get('../api/gethotfood.php',data=>{
+                            let d = JSON.parse(data);
+                            $('<div />').addClass('content_t clearfix').appendTo('.tabcontent');
+                            $('<div />').addClass('content_tl fl').appendTo('.content_t');
+                            $('<img />').attr('src',d[0].imgurl).appendTo('.content_tl');
+                            $('<p />').addClass('goodsname').html(`${d[0].name}<br />`).appendTo('.content_tl');
+                            $('<span>').text(d[0].description).appendTo('.goodsname');
+
+                            $('<div / >').addClass('content_tr fr').appendTo('.content_t');
+                            $('<div/>').addClass('content_trt').appendTo('.content_tr');
+                            $('<img />').attr('src',d[1].imgurl).appendTo('.content_trt');
+                            $('<p />').addClass('goodsname').html(`${d[1].name}<br />`).appendTo('.content_trt');
+                            $('<span>').text(d[1].description).appendTo('.content_trt .goodsname');
+
+                            $('<div/>').addClass('content_trb').appendTo('.content_tr');
+                            $('<img />').attr('src',d[2].imgurl).appendTo('.content_trb');
+                            $('<p />').addClass('goodsname').html(`${d[2].name}<br />`).appendTo('.content_trb');
+                            $('<span>').text(d[2].description).appendTo('.content_trb .goodsname');
+
+                            $('<div />').addClass('content_b').appendTo('.tabcontent');
+                            $('<ul></ul>').addClass('clearfix').appendTo('.content_b');
+                            $('.content_b ul').html(this.renderhot(d));
+                            
+                        })
+                }
+                
+
+            },
+            renderhot(d){
+                let content = "";
+                for(let i=3;i<d.length;i++){
+                    content += `<li><a href="#"><img src="${d[i].imgurl}"><p class="content_bgoods">${d[i].name}<br /><span>${d[i].description}</span></a></li>`
+                }
+                return content;
+            },
+            renderimport(data){
+                let content = '';
+                content += data.map(function(item){
+                    return `<li><a href="#"><img src="../${item.imgurl}"><p>${item.name}</p><span>￥${item.price}</span></a></li>`
+                }).join('');
+                return content;
+            }
+
+            
+        }
+        new Tab({
+            ele:'.tab_zhuliang',
+            text:["热门","进口猫粮","国产猫粮","处方猫粮"],
+        })
+        
+        
+        
         
        
         

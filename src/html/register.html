@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>注册</title>
+    <link rel="stylesheet" type="text/css" href="../css/register.css" />
+</head>
+<body>
+<!------------------------logo-------------------------->
+    <div id="reglogo">
+        <div class="container clearfix">
+            <a class="reglogo_l fl" href="../index.html">
+               <img src="../img/dog-logo" alt="" />
+               <span>·</span>欢迎注册
+            </a>
+            
+            <div class="reglogo_r fr">
+                <p>已有账号？<a href="login.html">登录</a></p>
+            </div>
+        </div>     
+    </div>
+<!-- ------------------------main-------------------------->
+    <div id="main">
+        <div class="container">
+            <div class="form">
+                <div class="form-group">
+                    <label for="phone">手机号:</label>
+                    <input type="text" id="phone" placeholder="请输入手机号"/>
+                    <p></p>
+                </div>
+                <div class="form-group">
+                    <label for="vcode">验证码:</label>
+                    <input type="text" id="vcode" placeholder="请输入图片内容"/>
+                    <div class="yzcode">
+                        <span>FGYM</span>
+                        <button class="btnRandom">换一换</button>
+                    </div>
+                    <p></p>
+                </div>
+                <div class="form-group">
+                    <label for="shortmsg">短信验证码:</label>
+                    <input type="text" id="shortmsg" placeholder="验证码"/>
+                    <button class="getmsgcode">获取验证码</button>
+                    <p></p>
+                </div>
+                <div class="form-group">
+                    <label for="username">用户名:</label>
+                    <input type="text" id="username\" placeholder="用户名"/>
+                    <p></p>
+                </div>
+                <div class="form-group">
+                    <label for="password">密码:</label>
+                    <input type="text" id="password" placeholder="密码（8-20位，区分大小写）" />
+                    <p></p>
+                    <ul class="pwd_level clearfix">
+                        <li>弱</li>
+                        <li>中</li>
+                        <li>强</li>
+                    </ul>
+
+                    
+                </div>
+                <div class="form-group">
+                    <label for="checkpsw">手机号:</label>
+                    <input type="text" id="checkpsw" placeholder="确认密码"/>
+                    <p></p>
+                </div>
+                <div class="form-group">
+                    <label class="addmit"><input type="checkbox" />我已阅读并接受E宠<a href="#">《用户使用协议》</a></label>
+                </div>
+                <div class="form-group">
+                    <button>立即注册</button>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+<!-- ------------------------bottom-------------------------->
+    <div id="bottom">
+        <div class="bottom_b">
+            <div class="container">     
+                <p class="addmit">渝ICP备13005525号-2　渝ICP备10002905　增值电信业务经营许可证：渝B2-20140042 Copyright © 2007-2018 epet.com 　重庆易宠科技有限公司</p>
+            </div>
+        </div>
+    </div>
+<!-- ------------------------kefu-------------------------->
+    <div class="kefu">
+        在线客服
+    </div>
+    <script type="text/javascript" src="../js/require.js" data-main="../js/register"></script>
+</body>
+</html>

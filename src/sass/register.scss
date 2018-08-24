@@ -1,0 +1,145 @@
+@import url("../css/common.css");
+#reglogo{
+    height:120px;
+    line-height:120px;
+    .reglogo_l{
+        color:#000;
+        span{
+            font-weight:bold;
+            margin:0 10px;
+        }
+        font-size:18px;
+    }
+    .reglogo_r{
+        font-size:14px;
+    }
+}
+#main{
+    height:618px;
+    border-top:1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    .form{
+        margin:55px auto 0 auto;
+        // width:800px;
+        padding: 0 230px;
+        label{
+            display:inline-block;
+            width:102px;
+            text-align:right;
+        }
+    }
+    .form-group{
+        margin-bottom:10px;
+        input{
+            height:55px;
+            width:415px;
+            border:1px solid #ddd;
+            border-radius:8px;
+            box-sizing:border-box;
+            padding-left:10px;
+        }
+        #vcode{
+            width:205px;    
+        }
+        .yzcode{
+            display:inline-block;
+            border:1px solid #ddd;
+            border-radius:8px;
+            button{
+                width:98px;
+                height:51px;
+                position:relative; 
+                padding:16px;
+                background:#fff;
+                &:before{
+                    content:"";
+                    display:block;
+                    width:16px;
+                    height:23px;
+                    background:url(../img/sprites.png) no-repeat;
+                    position:absolute;
+                    left:5px;
+                    top:15px;
+                    background-position:-500px -100px;
+                }
+                &:hover{
+                    color:#0af;
+                }
+            }
+        }
+        span{    
+            display:inline-block;      
+            width:102px;
+            height:53px;
+            text-align:center;
+            background:#0fa;
+            line-height:53px;
+        }
+        
+        #shortmsg{
+            width:255px;
+        }
+        .getmsgcode{
+            width:150px;
+            height:55px;
+            border:1px solid #0fa;
+            background:#fff;
+            box-sizing:border-box;
+            border-radius:8px;
+            margin-left:5px;
+            color:#999;
+            font-size:14px;
+            &:hover{
+                background:#33cb98;
+                color:#fff;
+            }
+        }
+        p{
+            display:inline-block;
+            width:170px;
+            height:55px;
+            background-color:#FFF3D9;
+            vertical-align:bottom;
+            visibility: hidden;
+            text-align:center;
+            font-size:12px;
+            line-height:55px;
+            color:#FF834A;
+        }
+        .addmit{
+            margin-left:100px;
+            font-size:12px;
+            display:inline;
+            input{
+                width:10px;
+                height:10px;
+            }
+        }
+        >button{
+            width:415px;
+            height:50px;
+            margin-left:100px;
+            background:#EDEDED;
+            font-size:20px;
+            color:#fff;
+        }
+        .pwd_level{
+            margin-left:100px;
+            margin-top:8px;
+            >li{
+                float:left;
+                background:#EEEEEE; 
+                width: 80px; 
+                margin: 4px; 
+                height: 20px;
+                font-size:12px;
+                text-align:center;
+                // background:#f60;
+                color:#fff;
+                line-height:20px;
+
+            }
+        }
+    }
+
+}
