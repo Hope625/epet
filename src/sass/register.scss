@@ -27,9 +27,15 @@
             width:102px;
             text-align:right;
         }
+        .addmit{
+            width:500px;
+            text-align:left;
+            margin-bottom:30px;
+        }
     }
     .form-group{
         margin-bottom:10px;
+        position:relative;
         input{
             height:55px;
             width:415px;
@@ -37,6 +43,17 @@
             border-radius:8px;
             box-sizing:border-box;
             padding-left:10px;
+        }
+        i{
+            // display:block;
+            width:20px;
+            height:23px;
+            background:url(../img/sprites.png) no-repeat;
+            position:absolute;
+            left:530px;
+            top:15px;
+            background-position:-540px -100px;
+            display:none;
         }
         #vcode{
             width:205px;    
@@ -66,15 +83,18 @@
                     color:#0af;
                 }
             }
+            span{   
+                border-top-left-radius:8px; 
+                border-bottom-left-radius:8px; 
+                display:inline-block;      
+                width:102px;
+                height:53px;
+                // text-align:center;
+                background:#0fa;
+                line-height:53px;
+            }
         }
-        span{    
-            display:inline-block;      
-            width:102px;
-            height:53px;
-            text-align:center;
-            background:#0fa;
-            line-height:53px;
-        }
+        
         
         #shortmsg{
             width:255px;
@@ -102,27 +122,11 @@
             vertical-align:bottom;
             visibility: hidden;
             text-align:center;
-            font-size:12px;
+            font-size:14px;
             line-height:55px;
             color:#FF834A;
         }
-        .addmit{
-            margin-left:100px;
-            font-size:12px;
-            display:inline;
-            input{
-                width:10px;
-                height:10px;
-            }
-        }
-        >button{
-            width:415px;
-            height:50px;
-            margin-left:100px;
-            background:#EDEDED;
-            font-size:20px;
-            color:#fff;
-        }
+       
         .pwd_level{
             margin-left:100px;
             margin-top:8px;
@@ -134,12 +138,28 @@
                 height: 20px;
                 font-size:12px;
                 text-align:center;
-                // background:#f60;
                 color:#fff;
                 line-height:20px;
 
             }
         }
+    }
+    .addmit{
+        margin-left:100px;
+        font-size:12px;
+        input{
+            width:12px;
+            height:12px;
+        }
+    }   
+    .btn_reg{
+        display:block;
+        width:415px;
+        height:50px;
+        margin-left:100px;
+        background:#EDEDED;
+        font-size:20px;
+        color:#fff;
     }
 
 }

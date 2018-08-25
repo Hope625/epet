@@ -1,7 +1,8 @@
 require(['config'],function(){
     require(['jquery','common'],function($){
          //获取地址请求
-        let Common = function(){
+        let Common = function(opt){
+            this.end = opt.end;
             this.init();
         }     
         Common.prototype = {
@@ -78,7 +79,7 @@ require(['config'],function(){
                     })
                 });
                 $('.categories ul li').addClass('clearfix');
-                let end = Date.parse('2018-8-23 00:00:00');
+                let end = Date.parse(this.end);
                 let timer = setInterval(countdown,1000);
                 //倒计时
                 function countdown(){
@@ -131,7 +132,9 @@ require(['config'],function(){
             
            
         }
-        new Common();
+        new Common({
+            end:'2018-08-25 12:00'
+        });
     })
 })
    

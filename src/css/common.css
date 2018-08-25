@@ -169,7 +169,7 @@
 
 #nav .nav_l > ul .categories > ul > li:hover { width: 230px; margin-left: -14px; margin-right: 0; padding-left: 14px; background-color: #fff; border-top: 1px solid #E73F85; border-bottom: 1px solid #E73F85; margin-top: -1px; border-right: 5px solid #fff; padding-right: 5px; }
 
-#nav .nav_l > ul .categories > ul > li:hover .goodstype, #nav .nav_l > ul .categories > ul > li:hover .sale { display: block; z-index: -10; }
+#nav .nav_l > ul .categories > ul > li:hover .goodstype, #nav .nav_l > ul .categories > ul > li:hover .cat_sale { display: block; z-index: -10; }
 
 #nav .nav_l > ul .categories > ul > li > p { float: left; }
 
@@ -233,33 +233,33 @@
 
 #nav .nav_l > ul .categories .goodstype > ul:last-of-type li:nth-of-type(3) a::after { background: url(../img/c6.png) no-repeat; background-size: cover; }
 
-#nav .nav_l > ul .categories .sale { width: 780px; height: 455px; position: absolute; top: -307px; padding: 15px; }
+#nav .nav_l > ul .categories .cat_sale { width: 780px; height: 455px; position: absolute; top: -307px; padding: 15px; }
 
-#nav .nav_l > ul .categories .sale > ul > li { float: left; position: relative; }
+#nav .nav_l > ul .categories .cat_sale > ul > li { float: left; position: relative; }
 
-#nav .nav_l > ul .categories .sale > ul > li > a { display: block; padding-right: 0; position: relative; margin: 5px; }
+#nav .nav_l > ul .categories .cat_sale > ul > li > a { display: block; padding-right: 0; position: relative; margin: 5px; }
 
-#nav .nav_l > ul .categories .sale > ul > li > a > img { width: 360px; height: 170px; }
+#nav .nav_l > ul .categories .cat_sale > ul > li > a > img { width: 360px; height: 170px; }
 
-#nav .nav_l > ul .categories .sale > ul > li .content { display: block; width: 330px; height: 135px; background-color: rgba(255, 255, 255, 0.92); position: absolute; left: 15px; top: 15px; border: 1px solid #7E776F; box-shadow: none; text-align: center; }
+#nav .nav_l > ul .categories .cat_sale > ul > li .content { display: block; width: 330px; height: 135px; background-color: rgba(255, 255, 255, 0.92); position: absolute; left: 15px; top: 15px; border: 1px solid #7E776F; box-shadow: none; text-align: center; }
 
-#nav .nav_l > ul .categories .sale > ul > li .content > img { width: 65px; height: 40px; background-size: cover; margin: 15px 0 0 0px; }
+#nav .nav_l > ul .categories .cat_sale > ul > li .content > img { width: 65px; height: 40px; background-size: cover; margin: 15px 0 0 0px; }
 
-#nav .nav_l > ul .categories .sale > ul > li .content > p { height: 35px; line-height: 35px; font-size: 18px; color: #666; text-align: center; margin: 0 15px; border-bottom: 1px dashed #8D908E; }
+#nav .nav_l > ul .categories .cat_sale > ul > li .content > p { height: 35px; line-height: 35px; font-size: 18px; color: #666; text-align: center; margin: 0 15px; border-bottom: 1px dashed #8D908E; }
 
-#nav .nav_l > ul .categories .sale > ul > li .content > span { margin-top: 15px; font-size: 14px; color: #666; }
+#nav .nav_l > ul .categories .cat_sale > ul > li .content > span { margin-top: 15px; font-size: 14px; color: #666; }
 
-#nav .nav_l > ul .categories .sale > ul > li .daojishi { display: block; height: 30px; background: rgba(0, 0, 0, 0.35); position: absolute; left: 0; top: 140px; border: 0 none; width: 360px; box-shadow: none; }
+#nav .nav_l > ul .categories .cat_sale > ul > li .daojishi { display: block; height: 30px; background: rgba(0, 0, 0, 0.35); position: absolute; left: 0; top: 140px; border: 0 none; width: 360px; box-shadow: none; }
 
-#nav .nav_l > ul .categories .sale > ul > li .daojishi > p { position: relative; margin-left: -15px; line-height: 30px; color: #fff; font-size: 12px; }
+#nav .nav_l > ul .categories .cat_sale > ul > li .daojishi > p { position: relative; margin-left: -15px; line-height: 30px; color: #fff; font-size: 12px; }
 
-#nav .nav_l > ul .categories .sale > ul > li .daojishi > p:before { content: ""; display: block; width: 23px; height: 22px; background: url(../img/sprites.png) no-repeat; position: absolute; left: 0; top: 0; background-position: -160px -40px; }
+#nav .nav_l > ul .categories .cat_sale > ul > li .daojishi > p:before { content: ""; display: block; width: 23px; height: 22px; background: url(../img/sprites.png) no-repeat; position: absolute; left: 0; top: 0; background-position: -160px -40px; }
 
-#nav .nav_l > ul .categories .sale > ul > li .daojishi > p > span:first-child { margin-left: 50px; }
+#nav .nav_l > ul .categories .cat_sale > ul > li .daojishi > p > span:first-child { margin-left: 50px; }
 
-#nav .nav_l > ul .categories .sale .promotion { width: 105px; height: 25px; background-color: #FF7174; line-height: 25px; margin-left: 330px; margin-top: 22px; padding-left: 10px; box-sizing: border-box; transform: skew(-10deg); }
+#nav .nav_l > ul .categories .cat_sale .promotion { width: 105px; height: 25px; background-color: #FF7174; line-height: 25px; margin-left: 330px; margin-top: 22px; padding-left: 10px; box-sizing: border-box; transform: skew(-10deg); }
 
-#nav .nav_l > ul .categories .sale .promotion > a { color: #fff; font-size: 14px; }
+#nav .nav_l > ul .categories .cat_sale .promotion > a { color: #fff; font-size: 14px; }
 
 #nav .nav_l > ul .categories > ul > li:last-child > p { height: 52px; line-height: 52px; border: 0 none; font-size: 14px; padding-left: 25px; width: 230px; box-sizing: border-box; }
 

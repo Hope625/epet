@@ -521,7 +521,7 @@
                             margin-top:-1px;
                             border-right:5px solid #fff;
                             padding-right:5px;
-                            .goodstype,.sale{
+                            .goodstype,.cat_sale{
                                 display:block;
                                 z-index:-10;
                             }
@@ -565,6 +565,7 @@
                         div{
                             top:-2px;
                         }
+                        
                         
                     }
                     >li:nth-of-type(2){
@@ -769,7 +770,7 @@
                     }
                 }                       
                 
-                .sale{
+                .cat_sale{
                     width:780px;
                     height:455px;
                     position:absolute;
