@@ -451,6 +451,11 @@ require(['config'],function(){
                 }
  
                 });
+                // if($('.tab').children('li').length>4){
+                //     $('.tabcontent').css({
+                //         left:$('.tabcontent').left + ($('.tab').children('li').length-4) * $('.tab').children('li').innerWidth() + 'px' 
+                //     })
+                // }
                 $('.tab').children('li').on('mouseout',function(){
                     $('.tab').find('li').eq(0).removeClass('tabactive');
                     $(this).removeClass('tabactive');
@@ -505,7 +510,8 @@ require(['config'],function(){
         new Tab({
             ele:'.tab_zhuliang',
             text:["热门","进口猫粮","国产猫粮","处方猫粮"],
-        })
+        });
+        
         
         
         
