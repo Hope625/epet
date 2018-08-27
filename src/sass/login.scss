@@ -1,0 +1,174 @@
+@import url("../css/common.css");
+#loginlogo{
+    height:120px;
+    line-height:120px;
+    .reglogo_l{
+        color:#000;
+        font-size:18px;
+        span{
+            font-weight:bold;
+            margin:0 10px;
+        }
+        
+    }
+    .reglogo_r{
+        font-size:14px;
+        a{
+            color:#999;
+        }
+        span{
+            margin: 0 10px;
+        }
+    }
+}
+#main{
+    height:618px;
+    background:url(../img/login.jpg) no-repeat;
+    background-color:#AAE3F7;
+    background-position:-300px 0;
+    .login{
+        margin-top:110px;
+        padding:30px 35px;
+        background:#fff;
+    }
+    .title{
+        width:315px;    
+        height:35px;
+        box-sizing:border-box;
+        border-bottom:1px solid #ddd;
+        a{
+            display:inline-block;
+            padding:0 35px;
+            height:34px;
+            font-size:14px;
+            color:#999;
+        }
+        a:hover{
+            border-bottom:1px solid #0fa;
+
+        }
+    }
+    .form{
+        .form-group{
+            position: relative;
+            input{
+                width:315px;
+                height:46px;
+                padding-left:45px;
+                box-sizing:border-box;
+                margin-top:20px;
+                border:1px solid #ddd;
+            }
+            &:before{
+                content:"";
+                display:block;
+                width:18px;
+                height:18px;
+                background:url(../img/ico.png) no-repeat;
+                position: absolute;
+                left:15px;
+                top:34px;
+            }   
+        }
+
+        .autologin{
+            font-size:12px;
+            margin-top:20px;
+            input{
+                float:left;
+            }
+            a{
+                float:right;
+                color:#999;
+            }
+        }
+        .btn_login{
+            width:315px;
+            height:50px;
+            margin-top:20px;
+            border-radius:10px;
+            background:#33CB98;
+            font-size:20px;
+            color:#fff;
+            span{
+                margin-right:50px;
+            }
+        }  
+    }
+    .form-group:first-child{
+        &:before{
+            background-position:0 0;
+        }  
+    }
+    .form-group:nth-child(2){
+        &:before{
+            background-position:0 -28px;
+        }
+    }
+    .other{
+        height:16px;
+        margin-top:15px;
+        font-size:12px;
+        span{
+            float:left;
+        }
+        a{
+            float:right;
+            color:#999;
+        }
+    }
+    .otherway{
+        margin-top:10px;
+        li{
+            float:left;
+            &:first-child{
+               a {background-position:0 -142px;}
+            }
+            &:nth-child(2){
+               a {background-position:0 -84px;}
+            }
+            &:last-child{
+               a {background-position:0 -172px;}
+            }
+        }
+        a{
+            display:block;
+            width:18px;
+            height:18px;
+            background:url(../img/ico.png);
+            margin-right:10px;
+
+        }
+
+    } 
+
+}
+#loginbottom{
+    margin-top:70px;
+    .container{
+        ul{
+            width:350px;
+            margin:0 auto;
+           >li{
+                float:left;
+                a{
+                    color:#999;
+                    display:block;
+                    padding:0 10px;
+                    font-size:12px;
+                    border-right:1px solid #ddd;
+                }
+            } 
+        }
+    }   
+}
+#bottom{
+    margin-top:8px;
+    background:#fff;
+    .bottom_b{
+        .addmit{
+            margin-top:0;
+        }
+    }
+}   
+  

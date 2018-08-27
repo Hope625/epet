@@ -27,7 +27,7 @@
             width:102px;
             text-align:right;
         }
-        .addmit{
+        .addmitrule{
             width:500px;
             text-align:left;
             margin-bottom:30px;
@@ -62,12 +62,16 @@
             display:inline-block;
             border:1px solid #ddd;
             border-radius:8px;
+            width:203px;
+            margin-top:10px;
+            vertical-align: bottom;
             button{
                 width:98px;
                 height:51px;
                 position:relative; 
                 padding:16px;
                 background:#fff;
+                box-sizing:border-box;
                 &:before{
                     content:"";
                     display:block;
@@ -83,15 +87,23 @@
                     color:#0af;
                 }
             }
-            span{   
+            .letter{   
                 border-top-left-radius:8px; 
                 border-bottom-left-radius:8px; 
-                display:inline-block;      
-                width:102px;
+                display:inline-block;
+                width:100px;
                 height:53px;
-                // text-align:center;
+                box-sizing:border-box;
                 background:#0fa;
                 line-height:53px;
+                vertical-align:middle;
+                span{
+                    width:18px;
+                    display:block;
+                    float:left;
+                    padding-left:5px;
+                    box-sizing:border-box;
+                }
             }
         }
         
@@ -144,7 +156,7 @@
             }
         }
     }
-    .addmit{
+    .addmitrule{
         margin-left:100px;
         font-size:12px;
         input{
@@ -161,5 +173,34 @@
         font-size:20px;
         color:#fff;
     }
-
 }
+#regbottom{
+    margin-top:70px;
+    .container{
+        ul{
+            width:350px;
+            margin:0 auto;
+           >li{
+                float:left;
+                a{
+                    color:#999;
+                    display:block;
+                    padding:0 10px;
+                    font-size:12px;
+                    border-right:1px solid #ddd;
+                }
+            } 
+        }
+    }   
+}
+#bottom{
+    margin-top:8px;
+    background:#fff;
+    .bottom_b{
+        .addmit{
+            margin-top:0;
+        }
+    }
+}
+
+

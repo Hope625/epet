@@ -13,7 +13,7 @@
 
 #main .form label { display: inline-block; width: 102px; text-align: right; }
 
-#main .form .addmit { width: 500px; text-align: left; margin-bottom: 30px; }
+#main .form .addmitrule { width: 500px; text-align: left; margin-bottom: 30px; }
 
 #main .form-group { margin-bottom: 10px; position: relative; }
 
@@ -23,15 +23,17 @@
 
 #main .form-group #vcode { width: 205px; }
 
-#main .form-group .yzcode { display: inline-block; border: 1px solid #ddd; border-radius: 8px; }
+#main .form-group .yzcode { display: inline-block; border: 1px solid #ddd; border-radius: 8px; width: 203px; margin-top: 10px; vertical-align: bottom; }
 
-#main .form-group .yzcode button { width: 98px; height: 51px; position: relative; padding: 16px; background: #fff; }
+#main .form-group .yzcode button { width: 98px; height: 51px; position: relative; padding: 16px; background: #fff; box-sizing: border-box; }
 
 #main .form-group .yzcode button:before { content: ""; display: block; width: 16px; height: 23px; background: url(../img/sprites.png) no-repeat; position: absolute; left: 5px; top: 15px; background-position: -500px -100px; }
 
 #main .form-group .yzcode button:hover { color: #0af; }
 
-#main .form-group .yzcode span { border-top-left-radius: 8px; border-bottom-left-radius: 8px; display: inline-block; width: 102px; height: 53px; background: #0fa; line-height: 53px; }
+#main .form-group .yzcode .letter { border-top-left-radius: 8px; border-bottom-left-radius: 8px; display: inline-block; width: 100px; height: 53px; box-sizing: border-box; background: #0fa; line-height: 53px; vertical-align: middle; }
+
+#main .form-group .yzcode .letter span { width: 18px; display: block; float: left; padding-left: 5px; box-sizing: border-box; }
 
 #main .form-group #shortmsg { width: 255px; }
 
@@ -45,8 +47,20 @@
 
 #main .form-group .pwd_level > li { float: left; background: #EEEEEE; width: 80px; margin: 4px; height: 20px; font-size: 12px; text-align: center; color: #fff; line-height: 20px; }
 
-#main .addmit { margin-left: 100px; font-size: 12px; }
+#main .addmitrule { margin-left: 100px; font-size: 12px; }
 
-#main .addmit input { width: 12px; height: 12px; }
+#main .addmitrule input { width: 12px; height: 12px; }
 
 #main .btn_reg { display: block; width: 415px; height: 50px; margin-left: 100px; background: #EDEDED; font-size: 20px; color: #fff; }
+
+#regbottom { margin-top: 70px; }
+
+#regbottom .container ul { width: 350px; margin: 0 auto; }
+
+#regbottom .container ul > li { float: left; }
+
+#regbottom .container ul > li a { color: #999; display: block; padding: 0 10px; font-size: 12px; border-right: 1px solid #ddd; }
+
+#bottom { margin-top: 8px; background: #fff; }
+
+#bottom .bottom_b .addmit { margin-top: 0; }

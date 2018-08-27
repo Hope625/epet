@@ -219,16 +219,17 @@ require(['config'],function(){
                     }                         
                 }
                 $('.fengqiang_rt ul').html(`${content}<li><a href="#">明日<br/>预告</a></li>`);
+                $('.fengqiang_l').children('p').children('span').text(`${
+                    $('.fengqiang_rt').find("a:contains('进行中')").text().slice(0,-3)}`);
                 $('.fengqiang_rt').find("a:contains('进行中')").css({
                     "color":'#000'
-                });
+                })
                 $('.fengqiang_rt').find("a:contains('即将开始')").css({
                     "color":'#000'
                 });
                 $('.fengqiang_rt').find("a:contains('已结束')").css({
                     "color":'#999'
                 });
-                $('.fengqiang_rt').find('li').eq(0).children('a').addClass('saleactive');
                 $('.fengqiang_rt').find('li').eq(0).children("a:contains('即将开始')").css({
                     'color':"#f00"
                 });
@@ -241,10 +242,14 @@ require(['config'],function(){
                 $('.fengqiang_rt').find('li').eq(0).children("a:contains('进行中')").closest('.fengqiang_r').find('button').css({
                     "background-color":"#ddd"
                 });
+                $('.fengqiang_rt').find("a:contains('进行中')").addClass('saleactive').css({
+                    "color":'#000'
+                })
                 $('.fengqiang_rt').find('li').on('mouseover',function(){
-                    $(this).removeClass('saleactive');
+                    $(this).find('a').removeClass('saleactive');
                     $(this).find("a:contains('即将开始')").addClass('saleactive');
-                    $(this).find("a:contains('即将开始')").css({
+                    $(this).find("a:contains('即将开始')").css(
+                    {
                         "color":"#f00"
                     })
                     $(this).find("a:contains('进行中')").addClass('saleactive');
@@ -271,8 +276,10 @@ require(['config'],function(){
                     $(".goods button:contains('即将开始')").css({
                         "background-color":"#0fa"
                    })
-                    $(".fengqiang_rb >img").hide();
-                    $(".good button:contains('已结束')").closest('li').find('>img').show();
+                    $(".goods button:contains('即将开始')").closest('li').find('>img').hide();
+                    $(".goods button:contains('进行中')").closest('li').find('>img').attr('src','../img/noting.png');
+                    $(".goods button:contains('已结束')").closest('li').find('>img').show();
+                    $(".goods button:contains('已结束')").closest('li').find('>img').attr('src','../img/daysur_over.png').show();
                 })
                 $('.fengqiang_rt').find('li').on('mouseout',function(){
                     $(this).eq(0).removeClass('saleactive');

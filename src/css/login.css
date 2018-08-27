@@ -1,0 +1,72 @@
+@import url("../css/common.css");
+#loginlogo { height: 120px; line-height: 120px; }
+
+#loginlogo .reglogo_l { color: #000; font-size: 18px; }
+
+#loginlogo .reglogo_l span { font-weight: bold; margin: 0 10px; }
+
+#loginlogo .reglogo_r { font-size: 14px; }
+
+#loginlogo .reglogo_r a { color: #999; }
+
+#loginlogo .reglogo_r span { margin: 0 10px; }
+
+#main { height: 618px; background: url(../img/login.jpg) no-repeat; background-color: #AAE3F7; background-position: -300px 0; }
+
+#main .login { margin-top: 110px; padding: 30px 35px; background: #fff; }
+
+#main .title { width: 315px; height: 35px; box-sizing: border-box; border-bottom: 1px solid #ddd; }
+
+#main .title a { display: inline-block; padding: 0 35px; height: 34px; font-size: 14px; color: #999; }
+
+#main .title a:hover { border-bottom: 1px solid #0fa; }
+
+#main .form .form-group { position: relative; }
+
+#main .form .form-group input { width: 315px; height: 46px; padding-left: 45px; box-sizing: border-box; margin-top: 20px; border: 1px solid #ddd; }
+
+#main .form .form-group:before { content: ""; display: block; width: 18px; height: 18px; background: url(../img/ico.png) no-repeat; position: absolute; left: 15px; top: 34px; }
+
+#main .form .autologin { font-size: 12px; margin-top: 20px; }
+
+#main .form .autologin input { float: left; }
+
+#main .form .autologin a { float: right; color: #999; }
+
+#main .form .btn_login { width: 315px; height: 50px; margin-top: 20px; border-radius: 10px; background: #33CB98; font-size: 20px; color: #fff; }
+
+#main .form .btn_login span { margin-right: 50px; }
+
+#main .form-group:first-child:before { background-position: 0 0; }
+
+#main .form-group:nth-child(2):before { background-position: 0 -28px; }
+
+#main .other { height: 16px; margin-top: 15px; font-size: 12px; }
+
+#main .other span { float: left; }
+
+#main .other a { float: right; color: #999; }
+
+#main .otherway { margin-top: 10px; }
+
+#main .otherway li { float: left; }
+
+#main .otherway li:first-child a { background-position: 0 -142px; }
+
+#main .otherway li:nth-child(2) a { background-position: 0 -84px; }
+
+#main .otherway li:last-child a { background-position: 0 -172px; }
+
+#main .otherway a { display: block; width: 18px; height: 18px; background: url(../img/ico.png); margin-right: 10px; }
+
+#loginbottom { margin-top: 70px; }
+
+#loginbottom .container ul { width: 350px; margin: 0 auto; }
+
+#loginbottom .container ul > li { float: left; }
+
+#loginbottom .container ul > li a { color: #999; display: block; padding: 0 10px; font-size: 12px; border-right: 1px solid #ddd; }
+
+#bottom { margin-top: 8px; background: #fff; }
+
+#bottom .bottom_b .addmit { margin-top: 0; }

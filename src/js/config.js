@@ -5,11 +5,11 @@ require.config({
         'jquery':'../lib/jquery-3.2.1',
         'html_common':'../js/html_common',
         'common':'../js/common',
-        'index':'../js/index'
     },
     shim:{
         'html_common':['common'],
         'index':['html_common'],
-        'register':['html_common']
+        'register':['html_common'],
+        'login':['html_common']
     }
 });

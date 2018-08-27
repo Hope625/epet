@@ -14,7 +14,7 @@
     // $servername = "localhost";
     // $username = "root";
     // $password = "";
-    // $dbname = 'outlet';
+    // $dbname = 'epet';
 
 
     // // 创建连接（实例化）
@@ -68,6 +68,5 @@
         }
     }
     $mydb = new MYDB('localhost','root','','epet');
-
 
 ?>

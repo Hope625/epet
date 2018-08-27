@@ -107,7 +107,7 @@
 
 #nav .nav_l:hover { border: 0 none; }
 
-#nav .nav_l > ul { position: relative; width: 230px; box-sizing: border-box; border: 1px solid #ccc; border-bottom: 0 none; }
+#nav .nav_l > ul { z-index: 1; position: relative; width: 230px; box-sizing: border-box; border: 1px solid #ccc; border-bottom: 0 none; }
 
 #nav .nav_l > ul > li { float: left; }
 

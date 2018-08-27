@@ -324,6 +324,7 @@
     }
     .nav_l{
         >ul{
+            z-index:1;
             position:relative;
             width:230px;
             box-sizing:border-box;
@@ -346,7 +347,6 @@
                         position:absolute;
                         
                     }
-
                     
                 }
                 div{

@@ -12,6 +12,15 @@ require(['config'],function(){
                 $.get("../api/data/hotsearch.json",data=>{
                     $('.hotsearch').html('热门搜索：'+this.getHotSearch(data));  
                 });
+                // let user = Cookie.get('');
+                // if(user.length<0){
+                //     user = [];
+                // }
+                // else{
+                //     user = JSON.parse(user);
+                //     render(user);
+                // }
+
                 //导航
                 $('.nav_l >ul >li >a').eq(0).addClass('navactive');
                 $('.animal').show();
@@ -81,6 +90,12 @@ require(['config'],function(){
                 $('.categories ul li').addClass('clearfix');
                 let end = Date.parse(this.end);
                 let timer = setInterval(countdown,1000);
+                // 渲染页面
+                // function render(user){
+                //     $('.top_r').find('.login').find('a').text(`${user.map(item=>{
+                //             return item.uname;
+                //     })}`)
+                // }
                 //倒计时
                 function countdown(){
                     let now = Date.now();
@@ -127,13 +142,10 @@ require(['config'],function(){
             getAddress(){       
                 
                 
-            },
-            
-            
-           
+            },                               
         }
         new Common({
-            end:'2018-08-25 12:00'
+            end:'2018-10-26 12:00'
         });
     })
 })
